@@ -38,9 +38,38 @@ Git is free software.
 ```
 **请注意：**文件一定要在目录<font color="red">`git-learning`</font>下（子目录也行），因为这是一个Git仓库，方到其他地方Git再厉害也找不到这个文件！
 
-2. 创建好文件<font color="red">`readme.txt`</font>后，我们通过命令<font color="red">`git add`</font>来告诉Git，把这个文件添加到仓库：   
+2. 创建好文件<font color="red">`readme.txt`</font>后，我们通过命令<font color="red">`git add`</font>来告诉Git，把这个文件***添加***到仓库：   
 ```bash
 $ git add readme.txt
 ```
+执行上面的命令后，没有任何显示？这就对了！Unix的哲学就是<font color="green">“没有消息就是好消息”</font>，说明添加成功：   
+![git Add](images/gitAdd-1.png)   
 
-3. 
+3. 接着，我们再使用命令<font color="red">`git commit`</font>，来将文件***提交***到仓库：   
+```bash
+$ git commit -m'wrote a readme file'
+[master 210d3b0] wrote a readme file
+  1 file changed, 2 insertions(+)
+ create mode 100644 readme.txt
+```
+<font color="green">`git bash`</font>中如下：   
+![git Commit](images/gitCommit-1.png)   
+
+- 解释下<font color="red">`git commit`</font>命令，<font color="red">`-m`</font>后面是输入本次提交的描述说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史版本中方便的找到改动记录。   
+<font color="red">***！！请注意！！：***</font>在windows的<font color="green">`git bash`</font>下，使用<font color="red">`-m`</font>添加注释时，注释请用单引号“'”，而不能像Mac一样使用双引号！
+- 嫌麻烦不想输入<font color="red">`-m 'xxxxx'`</font>可以么？确实有办法可以这么干，但是强烈不建议你这么干，因为输入说明对自己对别人阅读都很重要。实在不想输入说明的童鞋请自行Google，廖老师不想告诉你这么做！
+- <font color="red">`git commit`</font>命令执行成功后会告诉你，<font color="red">`1 file changed`</font>：1个文件被改动（我们添加的readme.txt文件）；<font color="red">`2 insertions`</font>：插入了两行内容（readme.txt有两行内容）。
+
+4. 为什么Git添加文件需要<font color="red">`add`</font>，<font color="red">`commit`</font>两步呢？因为<font color="red">`commit`</font>可以一次提交很多文件，所以你可以多次<font color="red">`add`</font>不同的文件，比如：
+```bash
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m'add 3 files'
+```
+### 小结
+现在总结一下今天学的两点内容：   
+1. 初始化一个Git仓库，使用<font color="red">`git init`</font>命令;   
+2. 添加文件到Git仓库，分2步：
+
+1. 使用命令<font color="red">`git add <file>`</font>，注意，可反复多次使用，添加多个文件；
+2. 使用命令<font color="red">`git commit -m <message>`</font>，完成。
