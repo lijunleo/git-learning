@@ -31,9 +31,16 @@ Initialized empty Git repository in D:/git/repository/git-learning/.git/
 
 <font color="red">不幸的是：</font>Microsoft的Word格式是二进制格式。因此，版本控制系统没法跟踪Word文件的改动的，前面我们举例只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件。      
 
-1. 现在我们在目录下编写一个<font color="red">`readme.txt`</font>文件，内容如下：   
+1. 现在我们在<font color="red">`git-learning`</font>目录下编写一个<font color="red">`readme.txt`</font>文件，内容如下：   
 ```bash
 Git is a version control system.
 Git is free software.
 ```
-2. 
+**请注意：**文件一定要在目录<font color="red">`git-learning`</font>下（子目录也行），因为这是一个Git仓库，方到其他地方Git再厉害也找不到这个文件！
+
+2. 创建好文件<font color="red">`readme.txt`</font>后，我们通过命令<font color="red">`git add`</font>来告诉Git，把这个文件添加到仓库：   
+```bash
+$ git add readme.txt
+```
+
+3. 
