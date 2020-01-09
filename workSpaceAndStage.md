@@ -7,7 +7,7 @@ Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的�
 
 ### 版本库（Repository）
 工作区有一个隐藏目录<font color="red">`.git`</font>，这个不算工作区，而是Git的版本库。   
-Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<font color="red">`master`</font>，以及指向<font color="red">`masteer`</font>的一个指针<font color="red">`HEAD`</font>    
+Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<font color="red">`master`</font>，以及指向<font color="red">`master`</font>的一个指针<font color="red">`HEAD`</font>    
 ![workingSpace and stage](images/workingSpaceAndStage.png)   
 分支和<font color="red">`HEAD`</font>的概念我们以后讲。   
 前面将了我们吧文件往Git版本库里添加的时候，是分两步执行的：
