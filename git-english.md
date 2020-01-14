@@ -14,5 +14,9 @@ n. 删除;
 [其他]复数：deletions
 ```
 ---
-3. 
+3. **origin** 美 [ˈɔːrɪdʒɪn]
+n.起源; 源头; 起因; 身世; 出身; 
+[例句]The disorder in military policy had its origins in Truman's first term
+军事政策的混乱可追溯到杜鲁门的第一届任期。
+[其他]复数：origins 
 
